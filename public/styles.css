@@ -63,3 +63,28 @@ a {
   color: #007bff;
   text-decoration: none;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .text-field {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  form {
+    display: block;
+    width: 100%;
+  }
+
+  .button {
+    flex-direction: column;
+  }
+}

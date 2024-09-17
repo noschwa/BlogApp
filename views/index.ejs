@@ -25,25 +25,29 @@
             <textarea name="content" placeholder="Blog Content" required></textarea>
         </div>
         <div class="button">
-            <button type="submit">Create Post</button> 
+            <button type="submit">Create Post</button>
         </div>
     </form>
-    
+
 
     <h2>All Blog Posts</h2>
     <ul>
         <% posts.forEach(post=> { %>
             <li>
                 <h3>
-                    <%= post.title %> by <%= post.author %>
+                    <%= post.title %>
                 </h3>
                 <p>
                     <%= post.content %>
                 </p>
-                <p><small>Posted on: <%= post.date %></small></p>
-                <a href="/edit/<%= post.id %>">Edit</a> |
-                <a href="/delete/<%= post.id %>">Delete</a>
+                <p><em>by <%= post.author %> on <%= post.date %></em></p>
             </li>
+            <div>
+                <a href="/edit/<%= post.id %>"><button>Edit</button></a>
+                <form action="/delete/<%= post.id %>" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
             <% }) %>
     </ul>
 </body>
