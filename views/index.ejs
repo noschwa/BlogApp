@@ -44,8 +44,8 @@
             </li>
             <div>
                 <a href="/edit/<%= post.id %>"><button>Edit</button></a>
-                <form action="/delete/<%= post.id %>" method="POST" style="display:inline;">
-                    <button type="submit">Delete</button>
+                <a href="/delete/<%= post.id %>"><button>Delete</button></a>
+                    
                 </form>
             </div>
             <% }) %>
